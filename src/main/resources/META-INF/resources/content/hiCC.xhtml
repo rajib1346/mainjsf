@@ -9,11 +9,11 @@
 	
     <e:textComponent id="hiCC" text="Hi Composite Component"/>
   
-     <h:head>
+     <ui:head>
         <title>Facelet Title</title>
         <link rel="stylesheet" href="css/styel.css"></link>
     </h:head>
-   <body>
+   <ui:body>
   
    
    
@@ -31,7 +31,7 @@
    </div>   
        <div class="navsection template clear">
           
-   <h:form>
+   <ui:form>
                <h:panelGrid columns="5">
                    
                    <h:commandButton value="Notes" action="#{secondSemester.page('note')}" style="margin-top: 4px;margin-left: 5px;width:80px ;height: 30px;font-size: 16px"></h:commandButton>
@@ -43,7 +43,7 @@
                   </p:selectOneMenu>
                    <p:commandButton value="submit" action="#{tabelElement.page()}" style=" height: 30px;margin-top:3px;"></p:commandButton>
              </h:panelGrid>     
-        </h:form>
+        </ui:form>
              
    </div>
        
@@ -90,5 +90,5 @@
 	     <p>&copy;All Rights Reserved by RT Solution</p>
 	</div>
            
-</body>
+</ui:body>
 </ui:composition>
