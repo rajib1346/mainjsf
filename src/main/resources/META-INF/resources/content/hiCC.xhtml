@@ -8,7 +8,13 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 	
     <e:textComponent id="hiCC" text="Hi Composite Component"/>
-	
+	  <p:menubar>
+                                    <p:menuitem value="Starter" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=starter')"
+                                                actionListener="#{contentMBean.setPage('starter')}" />
+                                    <p:menuitem value="1st Semester" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=1S')"
+                                                actionListener="#{contentMBean.setPage('1S')}" />
+                                   
+                                </p:menubar>
   <div class="contentsection template clear">
       <div class="maincontaint clear">
 	      
