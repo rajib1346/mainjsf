@@ -1,54 +1,15 @@
-<?xml version='1.0' encoding='UTF-8' ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-   
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-  
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-	
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-               
-                xmlns:p="http://primefaces.org/ui">
-    <h:head>
-        <title>Facelet Title</title>
-        <link rel="stylesheet" href="css/styel.css"></link>
-    </h:head>
-   <body>
-  
-   
-   
-   <div class="headersection template clear">
-  
-       <div class="logotitle clear" style="font-size: 35px;margin-top:43px;margin-left: 250px">
-          <h2>1st Semester</h2>
-	 </div>
-     	<div class="counter">
-            <h3>Your Visiting ID</h3>
-            <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter1.fcs.ovh/private/freecounterstat.php?c=fz3ulnstcwtjsp6mdraehaj7n4nuh2pa" border="0" title="web counter" alt="web counter"></img></a>
-
-       </div>
+                xmlns:e="http://xmlns.jcp.org/jsf/composite/cc"
+		xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 	
-   </div>   
-       <div class="navsection template clear">
-          
-   <h:form>
-               <h:panelGrid columns="5">
-                   
-                   <h:commandButton value="Notes" action="#{fastSemester.page('note')}" style="margin-top: 4px;margin-left: 5px;width:80px ;height: 30px;font-size: 16px"></h:commandButton>
-                   <h:commandButton value="Book" action="#{fastSemester.page('book')}" style="margin-top: 4px;width:80px ;height: 30px;font-size: 16px;margin-left: 5px"></h:commandButton>
-                   <h:commandButton value="Previous_NU_Question" action="#{fastSemester.page('Previous_NU_Question')}" style="margin-top: 4px;width:180px ;height: 30px;font-size: 16px;margin-left: 5px"></h:commandButton>
-                   
-                   <p:selectOneMenu value="#{tabelElement.semester}" style="margin-top:5px;margin-left: 260px;width: 150px">
-                     <f:selectItems value="#{tabelElement.allsemester}"></f:selectItems>
-                  </p:selectOneMenu>
-                   <p:commandButton value="submit" action="#{tabelElement.page()}" style=" height: 30px;margin-top:3px;"></p:commandButton>
-             </h:panelGrid>     
-        </h:form>
-             
-   </div>
-       
-          
- <div class="contentsection template clear">
+    <e:textComponent id="hiCC" text="Hi Composite Component"/>
+	
+  <div class="contentsection template clear">
       <div class="maincontaint clear">
 	      
 
@@ -82,14 +43,13 @@
 
       </div>
    </div>  
-   
-       
+  
+  
 	<div class="footersection template clear">
 	
 	     
 	     <p>&copy;All Rights Reserved by RT Solution</p>
 	</div>
            
-</body>
-</ui:composition>
 
+</ui:composition>
