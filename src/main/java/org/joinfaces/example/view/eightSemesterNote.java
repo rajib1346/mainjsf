@@ -52,6 +52,7 @@ String line;
     }
 
     public List<tabelElement> getLocation() throws  FileNotFoundException, IOException {
+         
 
         List<tabelElement> list = new ArrayList<tabelElement>();
        //  BufferedReader br=null;
