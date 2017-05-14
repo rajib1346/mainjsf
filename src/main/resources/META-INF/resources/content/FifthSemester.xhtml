@@ -6,8 +6,13 @@
                 xmlns:p="http://primefaces.org/ui">
     	<h1>5th Semester</h1>
 	                      
-					
-                                  <f:verbatim><marquee>hello world!</marquee></f:verbatim>
+				<p:menuber>	
+                                    <p:menuitem value="Notes" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=4thNotes')"
+                                                actionListener="#{contentMBean.setPage('4thNotes')}" />
+                                    <p:menuitem value="Books" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=4thBooks')"
+                                                actionListener="#{contentMBean.setPage('4thBooks')}" />
+		                    <p:menuitem value="Books" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=4thBooks')"
+                                   </p:menuber>	
                                   
                                
   <div class="contentsection template clear">
