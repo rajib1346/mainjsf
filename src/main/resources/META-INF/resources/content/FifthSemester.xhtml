@@ -10,7 +10,9 @@
                                                 actionListener="#{contentMBean.setPage('4thNotes')}" />
                                     <p:menuitem value="Books" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=4thBooks')"
                                                 actionListener="#{contentMBean.setPage('4thBooks')}" />
-                                   
+		                    <p:menuitem value="Books" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=4thBooks')"
+                                                actionListener="#{contentMBean.setPage('4thBooks')}" />
+                                   <h:link value="jump" fragment="book" />
                                 </p:menubar>
   <div class="contentsection template clear">
       <div class="maincontaint clear">
@@ -29,7 +31,7 @@
 		  
 		  </div>
 		  
-		  <div class="samepost clear">
+		  <div id="book" class="samepost clear">
 		   <h2>Subject Wise Credit</h2>
 		   <img src="images/java.jpg" alt="post image"></img>
 		     <p>
