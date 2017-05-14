@@ -33,7 +33,7 @@ import javax.faces.context.FacesContext;
 
 @ManagedBean
 @SessionScoped
-public class fourthSemester {
+public class fourthSemesterNote {
     
     private String selectedname;
 private Scanner x;
