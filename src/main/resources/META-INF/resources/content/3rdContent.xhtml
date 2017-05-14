@@ -10,7 +10,7 @@
     <h:body style="background: #3371FF">
         <h:form>
                   
-            <h:dataTable value="#{thirdSemester.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                  <h:dataTable value="#{thirdSemesterNote.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
    <h:column>    				
                <f:facet name = "header" >ID</f:facet>    				
                <h:outputLabel value = "#{u.id}" />
@@ -19,7 +19,7 @@
             
             <h:column>
                <f:facet name = "header">File Name</f:facet>
-               <h:outputLabel value = "#{u.fileName}"
+               <h:outputLabel value = "#{u.location}"
                             
                    />
                
@@ -41,7 +41,7 @@
                       <h:column>
                <f:facet name = "header">Download</f:facet>
                
-               <h:commandButton value="Download File" action="#{thirdSemester.download(u.location ,u.fileName)}" style="color: blue"/>     
+               <h:commandButton value="Download File" action="#{thirdSemesterNote.download(u.location)}" style="color: blue"/>     
             </h:column>
             
            
