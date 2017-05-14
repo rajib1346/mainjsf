@@ -21,7 +21,7 @@ import javax.faces.context.FacesContext;
 
 @ManagedBean
 @SessionScoped
-public class eighthSemester {
+public class eighthSemesterNote {
         private String selectedname;
 
     public String getSelectedname() {
