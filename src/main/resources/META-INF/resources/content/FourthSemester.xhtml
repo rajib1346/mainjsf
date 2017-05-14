@@ -8,7 +8,12 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 	
 	<h1>4th Semester</h1>
-	                        <h2 style="color: #f44336">To Downlod Notes,Prvious Year NU Questions Please Scrool Down !</h2>
+	                        <p:menubar>	
+                                    <p:menuitem value="Download Notes & Previous Year NU Questions" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=4thNotes')"
+                                                actionListener="#{contentMBean.setPage('4thNotes')}" />
+                                   
+						
+                                   </p:menubar>	
 	
 	
   <div class="contentsection template clear">
