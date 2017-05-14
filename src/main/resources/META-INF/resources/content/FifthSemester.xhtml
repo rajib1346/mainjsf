@@ -58,48 +58,6 @@
 	     
 	     <p>&copy;All Rights Reserved by RT Solution</p>
 	</div>
-           
-          <h:form>
-                  
-                  <h:dataTable value="#{fifthSemesterNote.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-   <h:column>    				
-               <f:facet name = "header" >ID</f:facet>    				
-               <h:outputLabel value = "#{u.id}" />
-     
-            </h:column>
-            
-            <h:column>
-               <f:facet name = "header">File Name</f:facet>
-               <h:outputLabel value = "#{u.location}"
-                            
-                   />
-               
-            </h:column>
-            
-            <h:column>
-               <f:facet name = "header">Writer</f:facet>
-               <h:outputLabel value = "#{u.author}" />
-               
-            </h:column>
-            
-            <h:column>
-               <f:facet name = "header">Size</f:facet>
-               <h:outputLabel value = "#{u.size}" 
-                  />
-                
-            </h:column>
-                      
-                      <h:column>
-               <f:facet name = "header">Download</f:facet>
-               
-               <h:commandButton value="Download File" action="#{fifthSemesterNote.download(u.location)}" style="color: blue"/>     
-            </h:column>
-            
-           
-            </h:dataTable>        
-                      
-
-</h:form>
-
+        
   
 </ui:composition>
