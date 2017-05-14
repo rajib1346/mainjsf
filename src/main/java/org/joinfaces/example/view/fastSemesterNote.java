@@ -41,7 +41,7 @@ import javax.faces.model.SelectItem;
 @SessionScoped
 @ManagedBean
 
-public class fastSemester {
+public class fastSemesterNote {
 
     private String selectedname;
 private Scanner x;
@@ -107,7 +107,7 @@ String line;
             externalContext.setResponseContentType("application/pdf");
             externalContext.setResponseHeader("Content-Disposition", "attachment;filename=\"" + l + "\"");
 
-            InputStream inputStream = FacesContext.getCurrentInstance().getExternalContext().getResourceAsStream("/fast/" + l + "");
+            InputStream inputStream = FacesContext.getCurrentInstance().getExternalContext().getResourceAsStream("/images/" + l + "");
             OutputStream outputStream = externalContext.getResponseOutputStream();
 
             byte[] buffer = new byte[2048];
