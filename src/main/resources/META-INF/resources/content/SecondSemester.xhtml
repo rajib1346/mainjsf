@@ -67,39 +67,26 @@
       <h:form>
                   <h:panelGrid>
                   
-			  <h:dataTable value="#{secondSemesterNote.getLocation()}" var="u" border="2" style=" margin-left: 30px;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+			  <h:dataTable value="#{secondSemesterNote.getLocationQuestion()}" var="u" border="2" style=" margin-left: 30px;height: 180;background:#fff ;color:darkgray azure;text-align: center">
                    <f:facet name = "header" >NU Privious Year Questions</f:facet>
-				  <h:column>    				
-               <f:facet name = "header" >ID</f:facet>    				
-               <h:outputLabel value = "#{u.id}" />
-     
-            </h:column>
+		
             
             <h:column>
                <f:facet name = "header">File Name</f:facet>
-               <h:outputLabel value = "#{u.location}"
+               <h:outputLabel value = "#{u.qlocation}"
                             
                    />
                
             </h:column>
             
-            <h:column>
-               <f:facet name = "header">Writer</f:facet>
-               <h:outputLabel value = "#{u.author}" />
-               
-            </h:column>
             
-            <h:column>
-               <f:facet name = "header">Size</f:facet>
-               <h:outputLabel value = "#{u.size}" 
-                  />
-                
-            </h:column>
+            
+            
                       
                       <h:column>
                <f:facet name = "header">Download</f:facet>
                
-               <h:commandButton value="Download File" action="#{secondSemesterNote.download(u.location)}" style="color: blue"/>  
+               <h:commandButton value="Download File" action="#{secondSemesterNote.downloadQuestion(u.qlocation)}" style="color: blue"/>  
 			      
 			      
             </h:column>
