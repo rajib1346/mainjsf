@@ -24,21 +24,92 @@
 		  <div class="samepost clear">
 		   <h2>NU Book List</h2>
 		  
-		  <h:form>
+		
+		  <h:panelGrid columns="2>
+			  <h:form>
+				<h:panelGrid>
+					
+					              <h:dataTable value="#{fastSemesterNote.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+   <h:column>    				
+               <f:facet name = "header" >ID</f:facet>    				
+               <h:outputLabel value = "#{u.id}" />
      
-                <h:panelGrid columns="1" border="2">
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">File Name</f:facet>
+               <h:outputLabel value = "#{u.location}"
+                            
+                   />
+               
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">Writer</f:facet>
+               <h:outputLabel value = "#{u.author}" />
+               
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">Size</f:facet>
+               <h:outputLabel value = "#{u.size}" 
+                  />
                 
-                 
-                <h:outputLabel value="Introduction to computer system" style="background: #33FF64"></h:outputLabel>
-                <h:outputLabel value="1.Understanding computer for advance level(4th edition)-Ray Bradley"></h:outputLabel>
-                <h:outputLabel value="2.Computer fundamentals(4th edition)-Pradeep K.Sinha"></h:outputLabel>
-                <h:outputLabel value="3.Computer Computer and information systems(5th edition)-Sarah E.Hutehinsonb and Staeey C.Sawyer"></h:outputLabel>
-                <h:outputLabel value="4.Computer fundamental-M.Lutfar Rahaman and M.Alamgir Hossain"></h:outputLabel>
-                                  
-            </h:panelGrid>
-        
-        </h:form>
-		  
+            </h:column>
+                      
+                      <h:column>
+               <f:facet name = "header">Download</f:facet>
+               
+               <h:commandButton value="Download File" action="#{fastSemesterNote.download(u.location)}" style="color: blue"/>     
+            </h:column>
+            
+           
+            </h:dataTable> 
+					
+		                 <h:panelGrid>
+			  <h:form>
+															   
+			<h:from>
+				<h:panelGrid>
+					              <h:dataTable value="#{fastSemesterNote.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+   <h:column>    				
+               <f:facet name = "header" >ID</f:facet>    				
+               <h:outputLabel value = "#{u.id}" />
+     
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">File Name</f:facet>
+               <h:outputLabel value = "#{u.location}"
+                            
+                   />
+               
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">Writer</f:facet>
+               <h:outputLabel value = "#{u.author}" />
+               
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">Size</f:facet>
+               <h:outputLabel value = "#{u.size}" 
+                  />
+                
+            </h:column>
+                      
+                      <h:column>
+               <f:facet name = "header">Download</f:facet>
+               
+               <h:commandButton value="Download File" action="#{fastSemesterNote.download(u.location)}" style="color: blue"/>     
+            </h:column>
+            
+           
+            </h:dataTable> 										   
+				<h:panelGrid>											   
+	               </h:form>												  
+	         </h:panelGrid>
 	      
 		  
 		  </div>
