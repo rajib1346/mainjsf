@@ -150,8 +150,7 @@ String line;
         }
     }
      public void downloadQuestion( String lo) {
-
-        String l = lo;
+  String l = lo;
       //  String n = name;
         try {
             FacesContext context = FacesContext.getCurrentInstance();
