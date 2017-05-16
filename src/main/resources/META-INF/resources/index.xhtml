@@ -31,6 +31,7 @@
                         </p:dialog>
                         <div id="starterDiv" class="ui-fluid">
                             <center>
+                                <ui:include id="spa_content" src="content/#{contentMBean.page}.xhtml"/>
                                 <p:menubar>
                                     <p:menuitem value="Home" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=starter')"
                                                 actionListener="#{contentMBean.setPage('starter')}" />
@@ -55,7 +56,7 @@
                                     
                                   <p:spacer height="10" />
 
-                                <ui:include id="spa_content" src="content/#{contentMBean.page}.xhtml"/>
+                              
                                 
                             </center>
                         </div>
