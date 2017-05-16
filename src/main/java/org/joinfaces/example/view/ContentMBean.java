@@ -47,7 +47,7 @@ public class ContentMBean implements Serializable {
 			page = initPage;
 		}
 		else {
-			page = "starter";
+			page = "home";
 		}
 	}
 }
