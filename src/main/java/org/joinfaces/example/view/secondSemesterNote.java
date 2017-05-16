@@ -121,7 +121,7 @@ String line;
 
         return list;
     }
-   public void downloadQuestion( String lo) {
+   public void downloadQuestion(String lo) {
 
         String l = lo;
       //  String n = name;
@@ -149,7 +149,7 @@ String line;
             e.printStackTrace(System.out);
         }
     }
-    public void download( String lo) {
+    public void download(String lo) {
 
         String l = lo;
       //  String n = name;
