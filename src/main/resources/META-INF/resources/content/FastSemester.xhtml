@@ -25,73 +25,7 @@
 		   <h2>NU Book List</h2>
 		  
 		
-	           <h:panelGrid columns="2">
-                
-           <h:form>
-                    <h:panelGrid>
-                                 <h:dataTable value="#{fastSemester.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-   <h:column>    				
-               <f:facet name = "header" >ID</f:facet>    				
-               <h:outputLabel value = "#{u.id}" />
-     
-            </h:column>
-            
-            <h:column>
-               <f:facet name = "header">File Name</f:facet>
-               <h:outputLabel value = "#{u.location}"
-                            
-                   />
-               
-            </h:column>
-            
-          
-                      
-                      <h:column>
-               <f:facet name = "header">Download</f:facet>
-               
-               <h:commandButton value="Download File" action="#{fastSemester.download(u.location)}" style="color: blue"/>     
-            </h:column>
-            
-           
-            </h:dataTable>        
-                      
-                    </h:panelGrid>
-               
-                </h:form>  
-             
-                <h:form>
-                    <h:panelGrid>
-                                 <h:dataTable value="#{fastSemester.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-   <h:column>    				
-               <f:facet name = "header" >ID</f:facet>    				
-               <h:outputLabel value = "#{u.id}" />
-     
-            </h:column>
-            
-            <h:column>
-               <f:facet name = "header">File Name</f:facet>
-               <h:outputLabel value = "#{u.location}"
-                            
-                   />
-               
-            </h:column>
-            
-          
-                      
-                      <h:column>
-               <f:facet name = "header">Download</f:facet>
-               
-               <h:commandButton value="Download File" action="#{fastSemester.download(u.location)}" style="color: blue"/>     
-            </h:column>
-            
-           
-            </h:dataTable>        
-                      
-                    </h:panelGrid>
-               
-                </h:form> 
-                
-            </h:panelGrid>
+	  
 	      
 		  
 		  </div>
