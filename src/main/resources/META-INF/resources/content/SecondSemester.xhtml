@@ -64,12 +64,11 @@
  </h:panelGrid>
                
                 </h:form> 
-      <h:form>
-                  <h:panelGrid>
-                  
-			  <h:dataTable value="#{secondSemesterNote.getLocationQuestion()}" var="u" border="2" style=" margin-left: 30px;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-                   <f:facet name = "header" >NU Privious Year Questions</f:facet>
-		
+     <h:form>
+                    <h:panelGrid>
+                        <h:dataTable value="#{secondSemesterNote.getLocationQuestion()}" var="u" border="2" style=" margin-left: 30px ;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+  				
+               
             
             <h:column>
                <f:facet name = "header">File Name</f:facet>
@@ -79,22 +78,18 @@
                
             </h:column>
             
-            
-            
-            
+          
                       
                       <h:column>
                <f:facet name = "header">Download</f:facet>
                
-               <h:commandButton value="Download File" action="#{secondSemesterNote.downloadQuestion(u.qlocation)}" style="color: blue"/>  
-			      
-			      
+               <h:commandButton value="Download File" action="#{secondSemesterNote.downloadQuestion(u.qlocation)}" style="color: blue"/>     
             </h:column>
             
            
             </h:dataTable>        
-       
- </h:panelGrid>
+                      
+                    </h:panelGrid>
                
                 </h:form>                
             </h:panelGrid>
