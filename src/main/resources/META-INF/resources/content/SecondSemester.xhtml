@@ -17,13 +17,55 @@
 						
                                
                                   
-                               
+             <h:form id="1">
+                  <h:panelGrid>
+                  <h:dataTable value="#{secondSemesterNote.getLocation()}" var="u1" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                <f:facet name = "header" >Hand Notes</f:facet>
+			  <h:column>    				
+               <f:facet name = "header" >ID</f:facet>    				
+               <h:outputLabel value = "#{u1.id}" />
+     
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">File Name</f:facet>
+               <h:outputLabel value = "#{u1.location}"
+                            
+                   />
+               
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">Writer</f:facet>
+               <h:outputLabel value = "#{u1.author}" />
+               
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">Size</f:facet>
+               <h:outputLabel value = "#{u1.size}" 
+                  />
+                
+            </h:column>
+                      
+                      <h:column>
+               <f:facet name = "header">Download</f:facet>
+               
+               <h:commandButton value="Download File" action="#{secondSemesterNote.download(u1.location)}" style="color: blue"/>     
+            </h:column>
+            
+           
+            </h:dataTable>        
+       
+ </h:panelGrid>
+               
+                </h:form>                     
 
                 
-           <h:form>
+           <h:form id="2">
                   <h:panelGrid>
                   <h:dataTable value="#{secondSemesterNote.getLocationQuestion()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-                <f:facet name = "header" >Hand Notes</f:facet>
+                <f:facet name = "header" >Previous Year Questions</f:facet>
 			  <h:column>    				
                <f:facet name = "header" >ID</f:facet>    				
                <h:outputLabel value = "#{u.id}" />
