@@ -22,7 +22,7 @@
                 
            <h:form id="two">
            
-                  <h:dataTable value="#{secondSemesterNote.getLocationQuestion()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                  <h:dataTable value="#{secondSemesterQuestion.getLocationQuestion()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
                 <f:facet name = "header" >Previous Year Questions</f:facet>
 			  <h:column>    				
                <f:facet name = "header" >ID</f:facet>    				
@@ -54,7 +54,7 @@
                       <h:column>
                <f:facet name = "header">Download</f:facet>
                
-               <h:commandButton value="Download File" action="#{secondSemesterNote.downloadQuestion(u.qlocation)}" style="color: blue"/>     
+               <h:commandButton value="Download File" action="#{secondSemesterQuestion.downloadQuestion(u.qlocation)}" style="color: blue"/>     
             </h:column>
             
            
