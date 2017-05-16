@@ -20,7 +20,7 @@
                        
    <h:form id="one">
            
-                  <h:dataTable value="#{secondSemesterNote.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                  <h:dataTable value="#{secondSemesterQuestion.getLocationQuestion()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
                 <f:facet name = "header" >Previous Year Questions</f:facet>
 			  <h:column>    				
                <f:facet name = "header" >ID</f:facet>    				
@@ -30,7 +30,7 @@
             
             <h:column>
                <f:facet name = "header">File Name</f:facet>
-               <h:outputLabel value = "#{u.location}"
+               <h:outputLabel value = "#{u.qlocation}"
                             
                    />
                
@@ -52,7 +52,7 @@
                       <h:column>
                <f:facet name = "header">Download</f:facet>
                
-               <h:commandButton value="Download File" action="#{secondSemesterNote.download(u.location)}" style="color: blue"/>     
+               <h:commandButton value="Download File" action="#{secondSemesterQuestion.download(u.qlocation)}" style="color: blue"/>     
             </h:column>
             
            
