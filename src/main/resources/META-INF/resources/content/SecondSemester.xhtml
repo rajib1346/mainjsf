@@ -15,10 +15,10 @@
 						
                                    </p:menubar>	
 						
-                               
+          <h:body>                     
                                   
              <h:form id="one">
-                  <h:panelGrid>
+                  
                   <h:dataTable value="#{secondSemesterNote.getLocation()}" var="u1" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
                 <f:facet name = "header" >Hand Notes</f:facet>
 			  <h:column>    				
@@ -57,13 +57,13 @@
            
             </h:dataTable>        
        
- </h:panelGrid>
+
                
                 </h:form>                     
 
                 
            <h:form id="two">
-                  <h:panelGrid>
+           
                   <h:dataTable value="#{secondSemesterNote.getLocationQuestion()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
                 <f:facet name = "header" >Previous Year Questions</f:facet>
 			  <h:column>    				
@@ -102,7 +102,7 @@
            
             </h:dataTable>        
        
- </h:panelGrid>
+ 
                
                 </h:form> 
         
@@ -117,7 +117,7 @@
 	     
 	     <p>&copy;All Rights Reserved by RT Solution</p>
 	</div>
-        
+	</h:body>      
   
 </ui:composition>
 
