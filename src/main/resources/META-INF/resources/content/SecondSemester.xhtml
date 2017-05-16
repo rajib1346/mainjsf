@@ -24,7 +24,8 @@
            <h:form>
                   <h:panelGrid>
                   <h:dataTable value="#{secondSemesterNote.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-   <h:column>    				
+                <f:facet name = "header" >Hand Notes</f:facet>
+			  <h:column>    				
                <f:facet name = "header" >ID</f:facet>    				
                <h:outputLabel value = "#{u.id}" />
      
@@ -65,8 +66,10 @@
                 </h:form> 
       <h:form>
                   <h:panelGrid>
-                  <h:dataTable value="#{secondSemesterNote.getLocation()}" var="u" border="2" style=" margin-left: 30px;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-   <h:column>    				
+                  
+			  <h:dataTable value="#{secondSemesterNote.getLocation()}" var="u" border="2" style=" margin-left: 30px;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                   <f:facet name = "header" >NU Privious Year Questions</f:facet>
+				  <h:column>    				
                <f:facet name = "header" >ID</f:facet>    				
                <h:outputLabel value = "#{u.id}" />
      
@@ -96,7 +99,9 @@
                       <h:column>
                <f:facet name = "header">Download</f:facet>
                
-               <h:commandButton value="Download File" action="#{secondSemesterNote.download(u.location)}" style="color: blue"/>     
+               <h:commandButton value="Download File" action="#{secondSemesterNote.download(u.location)}" style="color: blue"/>  
+			      
+			      
             </h:column>
             
            
