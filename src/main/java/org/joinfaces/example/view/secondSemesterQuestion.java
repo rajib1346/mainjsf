@@ -22,7 +22,7 @@ import javax.faces.context.FacesContext;
 
 @SessionScoped
 @ManagedBean
-public class FastSemesterQuestion {
+public class secondSemesterQuestion {
     
      public List<tabelElement> getLocationQuestion() throws  FileNotFoundException, IOException {
 
