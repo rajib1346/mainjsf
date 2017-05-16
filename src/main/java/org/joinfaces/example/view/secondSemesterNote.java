@@ -121,34 +121,6 @@ String line;
 
         return list;
     }
-   public void downloadQuestion(String lo) {
-
-        String l = lo;
-      //  String n = name;
-        try {
-            FacesContext context = FacesContext.getCurrentInstance();
-            ExternalContext externalContext = context.getExternalContext();
-
-            externalContext.responseReset();
-            externalContext.setResponseContentType("application/pdf");
-            externalContext.setResponseHeader("Content-Disposition", "attachment;filename=\"" + l + "\"");
-
-            InputStream inputStream = FacesContext.getCurrentInstance().getExternalContext().getResourceAsStream("/fast/" + l + "");
-            OutputStream outputStream = externalContext.getResponseOutputStream();
-
-            byte[] buffer = new byte[2048];
-            int length;
-            while ((length = inputStream.read(buffer)) > 0) {
-                outputStream.write(buffer, 0, length);
-            }
-
-            inputStream.close();
-            context.responseComplete();
-
-        } catch (Exception e) {
-            e.printStackTrace(System.out);
-        }
-    }
     public void download(String lo) {
 
         String l = lo;
@@ -177,4 +149,33 @@ String line;
             e.printStackTrace(System.out);
         }
     }
+     public void downloadQuestion( String lo) {
+
+        String l = lo;
+      //  String n = name;
+        try {
+            FacesContext context = FacesContext.getCurrentInstance();
+            ExternalContext externalContext = context.getExternalContext();
+
+            externalContext.responseReset();
+            externalContext.setResponseContentType("application/pdf");
+            externalContext.setResponseHeader("Content-Disposition", "attachment;filename=\"" + l + "\"");
+
+            InputStream inputStream = FacesContext.getCurrentInstance().getExternalContext().getResourceAsStream("/fast/" + l + "");
+            OutputStream outputStream = externalContext.getResponseOutputStream();
+
+            byte[] buffer = new byte[2048];
+            int length;
+            while ((length = inputStream.read(buffer)) > 0) {
+                outputStream.write(buffer, 0, length);
+            }
+
+            inputStream.close();
+            context.responseComplete();
+
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        }
+    }  
+    
 }
