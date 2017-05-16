@@ -33,15 +33,16 @@ import org.primefaces.model.StreamedContent;
 public class tabelElement {
   
     private String selectedname,id,location,fileName,Author,size,semester;
-     private String Qlocation;
+      private String qlocation;
 
     public String getQlocation() {
-        return Qlocation;
+        return qlocation;
     }
 
-    public void setQlocation(String Qlocation) {
-        this.Qlocation = Qlocation;
+    public void setQlocation(String qlocation) {
+        this.qlocation = qlocation;
     }
+
     
     public List<String> getAllsemester(){
     
