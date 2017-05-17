@@ -51,15 +51,15 @@
                
                 </h:form>  
              
-                <h:form>
-                    <h:panelGrid>
-                        <h:dataTable value="#{secondSemesterQuestion.getLocationQueston()}" var="u" border="2" style=" margin-left: 30px ;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                <h:form id="2">
+                    <h:panelGrid id="2">
+                        <h:dataTable value="#{secondSemesterQuestion.getLocationQuestion()}" var="u2" border="2" style=" margin-left: 30px ;height: 180;background:#fff ;color:darkgray azure;text-align: center">
   				
                
             
             <h:column>
                <f:facet name = "header">File Name</f:facet>
-               <h:outputLabel value = "#{u.qlocation}"
+               <h:outputLabel value = "#{u2.qlocation}"
                             
                    />
                
@@ -70,7 +70,7 @@
                       <h:column>
                <f:facet name = "header">Download</f:facet>
                
-               <h:commandButton value="Download File" action="#{secondSemesterQuestion.downloadQuestion(u.qlocation)}" style="color: blue"/>     
+               <h:commandButton value="Download File" action="#{secondSemesterQuestion.downloadQuestion(u2.qlocation)}" style="color: blue"/>     
             </h:column>
             
            
