@@ -21,7 +21,7 @@ import javax.faces.context.FacesContext;
 
 @SessionScoped
 @ManagedBean
-public class secondSemesterQuestion {
+public class fourthSemesterQuestion{
     
      public List<tabelElement> getLocationQuestion() throws  FileNotFoundException, IOException {
 
@@ -35,7 +35,7 @@ public class secondSemesterQuestion {
 //
 //        Statement stmt = con.createStatement();
 //        ResultSet rs = stmt.executeQuery("select id,location,fileName,Author,size from " + selectedname + "");
- URL oracle = new URL("http://shawonislam.com/rajib/fast.txt");
+ URL oracle = new URL("http://shawonislam.com/rajib/fourthques.txt");
     BufferedReader in = new BufferedReader(
     new InputStreamReader(oracle.openStream()));
 
