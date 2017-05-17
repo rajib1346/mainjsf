@@ -11,11 +11,7 @@
         <h:form>
                   
                   <h:dataTable value="#{eightSemesterNote.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-   <h:column>    				
-               <f:facet name = "header" >ID</f:facet>    				
-               <h:outputLabel value = "#{u.id}" />
-     
-            </h:column>
+                 <f:facet name = "header" >Hand Notes</f:facet>    	
             
             <h:column>
                <f:facet name = "header">File Name</f:facet>
@@ -25,18 +21,9 @@
                
             </h:column>
             
-            <h:column>
-               <f:facet name = "header">Writer</f:facet>
-               <h:outputLabel value = "#{u.author}" />
-               
-            </h:column>
             
-            <h:column>
-               <f:facet name = "header">Size</f:facet>
-               <h:outputLabel value = "#{u.size}" 
-                  />
-                
-            </h:column>
+            
+          
                       
                       <h:column>
                <f:facet name = "header">Download</f:facet>
