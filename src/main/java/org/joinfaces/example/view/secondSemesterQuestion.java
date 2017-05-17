@@ -55,7 +55,7 @@ public class secondSemesterQuestion {
 
         return list;
     }
-   public void downlo( String lo) {
+   public void downloadQuestion( String lo) {
 
         String l = lo;
       //  String n = name;
