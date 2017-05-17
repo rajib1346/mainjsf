@@ -1,88 +1,63 @@
-<?xml version='1.0' encoding='UTF-8' ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:head>
-        <title>Facelet Title</title>
-        <link rel="stylesheet" href="css/styel.css"></link>
-    </h:head>
-    <h:body style="background: #3371FF">
-       
-                  
-            <h:panelGrid columns="2">
-                
-                <h:form id="one">
-                    <h:panelGrid id="one">
-       
-                        <h:dataTable value="#{secondSemesterNote.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-                              				
-               <f:facet name = "header" >Hand Notes</f:facet>    				
-               
-     
-            
-   <h:column>    				
-               <f:facet name = "header" >ID</f:facet>    				
-               <h:outputLabel value = "#{u.id}" />
-     
-            </h:column>
-            
-            <h:column>
-               <f:facet name = "header">File Name</f:facet>
-               <h:outputLabel value = "#{u.location}"
-                            
-                   />
-               
-            </h:column>
-            
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui">
+    	<h1>7th Semester</h1>
+	                      
+				
+                                 <p:menubar>	
+                                    <p:menuitem value="Download Notes and Previous Year NU Questions" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=2ndNote')"
+                                                actionListener="#{contentMBean.setPage('2ndNote')}" />
+                                   
+						
+                                   </p:menubar>	
+						
+                               
+                                  
+                               
+  <div class="contentsection template clear">
+      <div class="maincontaint clear">
+	      
+
+		  <div class="samepost clear">
+		   <h2>NU Book List</h2>
+		   <img src="images/java.jpg" alt="post image"></img>
+		     <p>
+             Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as
+		     few implementation dependencies as possible.The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary 
+		     licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under 
+		     the GNU General Public License.</p>
+		  
+	      
+		  
+		  </div>
+		  
+		  <div  class="samepost clear">
+		   <h2>Subject Wise Credit</h2>
+		   <img src="images/java.jpg" alt="post image"></img>
+		     <p>
+                     Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as
+		     few implementation dependencies as possible.The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary 
+		     licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under 
+		     the GNU General Public License.</p>
+		  
+	      
+		  
+		  </div>
           
-                      
-                      <h:column>
-               <f:facet name = "header">Download</f:facet>
-               
-               <h:commandButton value="Download File" action="#{secondSemesterNote.download(u.location)}" style="color: blue"/>     
-            </h:column>
             
-           
-            </h:dataTable>        
-                      
-                    </h:panelGrid>
-               
-                </h:form>  
-             
-                <h:form id="two">
-                    <h:panelGrid id="two">
-                        <h:dataTable value="#{secondSemesterQuestion.getLocationQuestion()}" var="u2" border="2" style=" margin-left: 30px ;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-  				
-               
-            
-            <h:column>
-               <f:facet name = "header">File Name</f:facet>
-               <h:outputLabel value = "#{u2.qlocation}"
-                            
-                   />
-               
-            </h:column>
-            
-          
-                      
-                      <h:column>
-               <f:facet name = "header">Download</f:facet>
-               
-               <h:commandButton value="Download File" action="#{secondSemesterQuestion.downloadQuestion(u2.qlocation)}" style="color: blue"/>     
-            </h:column>
-            
-           
-            </h:dataTable>        
-                      
-                    </h:panelGrid>
-               
-                </h:form> 
-                
-            </h:panelGrid>
 
-
-    </h:body>
-</html>
-
+      </div>
+   </div>  
+  
+  
+	<div class="footersection template clear">
+	
+	     
+	     <p>&copy;All Rights Reserved by RT Solution</p>
+	</div>
+        
+  
+</ui:composition
