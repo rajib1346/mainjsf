@@ -35,7 +35,7 @@ public class fastSemesterQuestion{
 //
 //        Statement stmt = con.createStatement();
 //        ResultSet rs = stmt.executeQuery("select id,location,fileName,Author,size from " + selectedname + "");
- URL oracle = new URL("http://shawonislam.com/rajib/fast.txt");
+ URL oracle = new URL("http://shawonislam.com/rajib/fastques.txt");
     BufferedReader in = new BufferedReader(
     new InputStreamReader(oracle.openStream()));
 
