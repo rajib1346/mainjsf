@@ -7,7 +7,9 @@
     	<h1>6th Semester</h1>
 	                      
 				
-                                 <p:menubar>	
+                                 <p:menubar>
+			            <p:menuitem value="Download Previous Year NU Questions | " ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=6thQuestion')"
+                                                actionListener="#{contentMBean.setPage('6thQuestion')}" />		 
                                     <p:menuitem value="Download Notes and Previous Year NU Questions" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=6thNote')"
                                                 actionListener="#{contentMBean.setPage('6thNote')}" />
                                    
