@@ -7,7 +7,20 @@
     <h:head>
         <title>Facelet Title</title>
     </h:head>
+      
+      
     <h:body style="background: #3371FF">
+          
+               <h2>5th Semester Note</h2>
+                                   <p:menubar>	
+					 
+			         
+                                   
+                                    <p:menuitem value="Download NU Previous Year Question" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=5thQuestion')"
+                                                actionListener="#{contentMBean.setPage('5thQuestion')}" />
+                                   
+						
+                                   </p:menubar>	
         <h:form>
                   
                   <h:dataTable value="#{fifthSemesterNote.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
