@@ -64,6 +64,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			throw new RuntimeException(ex);
 		}
 	}
-
+@Override
+	protected UserDetailsService userDetailsService() {
+		UserDetails user1 = new User("persapiens", "123", AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_ADMIN"));
+		UserDetails user2 = new User("nyilmaz", "qwe", AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
+		return new InMemoryUserDetailsManager(Arrays.asList(user1, user2));
+	}
 	
 }
