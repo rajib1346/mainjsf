@@ -47,8 +47,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.authorizeRequests()
 				.antMatchers("/").permitAll()
 				.antMatchers("/index.jsf").permitAll()
-				.antMatchers("/javax.faces.resource/**").permitAll()
-				.anyRequest().authenticated()
+				.antMatchers("/javax.faces.resource/**").permitAll();
+				
 				
 		}
 		catch (Exception ex) {
