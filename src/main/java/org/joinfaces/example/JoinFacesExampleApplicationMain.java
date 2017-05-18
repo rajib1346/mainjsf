@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2016-2016 the original author or authors.
  *
@@ -17,15 +16,19 @@
 
 package org.joinfaces.example;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.SpringApplication;
 
 /**
- * JoinFaces Example Configuration class.
+ * Main class.
  * @author Marcelo Fernandes
  */
-@SpringBootApplication
-public class JoinFacesExampleApplication {
+public class JoinFacesExampleApplicationMain {
 
-	protected JoinFacesExampleApplication() {
+	protected JoinFacesExampleApplicationMain() {
 	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(JoinFacesExampleApplication.class, args);
+	}
+
 }
