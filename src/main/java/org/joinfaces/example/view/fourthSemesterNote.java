@@ -96,7 +96,7 @@ String line;
             ExternalContext externalContext = context.getExternalContext();
 
             externalContext.responseReset();
-            externalContext.setResponseContentType("application/pdf");
+            externalContext.setResponseContentType("application/zip");
             externalContext.setResponseHeader("Content-Disposition", "attachment;filename=\"" + l + "\"");
 
             InputStream inputStream = FacesContext.getCurrentInstance().getExternalContext().getResourceAsStream("/images/" + l + "");
