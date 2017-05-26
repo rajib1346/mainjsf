@@ -19,46 +19,45 @@
                                
                                   
                                
-  <div class="contentsection template clear">
-      <div class="maincontaint clear">
-	      
-
-		  <div class="samepost clear">
-		   <h2>NU Book List</h2>
-		   <img src="images/java.jpg" alt="post image"></img>
-		     <p>
-             Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as
-		     few implementation dependencies as possible.The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary 
-		     licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under 
-		     the GNU General Public License.</p>
-		  
-	      
-		  
-		  </div>
-		  
-		  <div  class="samepost clear">
-		   <h2>Subject Wise Credit</h2>
-		   <img src="images/java.jpg" alt="post image"></img>
-		     <p>
-                     Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as
-		     few implementation dependencies as possible.The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary 
-		     licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under 
-		     the GNU General Public License.</p>
-		  
-	      
-		  
-		  </div>
-          
+        <h:form>
             
-
-      </div>
-   </div>  
+            <h:panelGrid columns="2">
+                <h:outputText value="CSE[311]"></h:outputText>
+                <h:selectOneMenu value="#{fifthSgpa.selectauto}">
+                    <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                 <h:outputText value="CSE[312]"></h:outputText>
+                 <h:selectOneMenu value="#{fifthSgpa.selectmircro}">
+                    <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[313]"></h:outputText>
+                  <h:selectOneMenu value="#{fifthSgpa.selectmicroprac}">
+                    <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[314]"></h:outputText>
+                  <h:selectOneMenu value="#{fifthSgpa.selectengmath}">
+                    <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[315]"></h:outputText>
+                  <h:selectOneMenu value="#{fifthSgpa.selectsociology}">
+                    <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[316]"></h:outputText>
+                  <h:selectOneMenu value="#{fifthSgpa.selecttechnical}">
+                    <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:commandLink value="submit" action="#{fifthSgpa.page(fifthSgpa.selectauto,fifthSgpa.selectmircro,fifthSgpa.selectmicroprac,fifthSgpa.selectengmath,fifthSgpa.selectsociology,fifthSgpa.selecttechnical)}"></h:commandLink>
+                  <h:outputLabel value="#{fifthSgpa.total}"></h:outputLabel>
+            </h:panelGrid>
+        </h:form>
+	
+	
   
   
 <div class="footersection template clear">
 	
 	     
-	     <p>&copy;NU CSE Home</p>
+	     <p>&copy; NU CSE Home</p>
 	</div>  	
         
   
