@@ -19,39 +19,39 @@
 						
                                
                                   
-                               
-        <h:form>
+  <h:form>
             
             <h:panelGrid columns="2">
-                <h:outputText value="CSE[311]"></h:outputText>
+                <h:outputText value="CSE[311]:Theory of Computation:"></h:outputText>
                 <h:selectOneMenu value="#{fifthSgpa.selectauto}">
                     <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
                 </h:selectOneMenu>
-                 <h:outputText value="CSE[312]"></h:outputText>
+                 <h:outputText value="CSE[312]:Microprocessor and Assembly Language:"></h:outputText>
                  <h:selectOneMenu value="#{fifthSgpa.selectmircro}">
                     <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
                 </h:selectOneMenu>
-                  <h:outputText value="CSE[313]"></h:outputText>
+                  <h:outputText value="CSE[313]:Assembly Language Practical:"></h:outputText>
                   <h:selectOneMenu value="#{fifthSgpa.selectmicroprac}">
                     <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
                 </h:selectOneMenu>
-                  <h:outputText value="CSE[314]"></h:outputText>
+                  <h:outputText value="CSE[314]Engineering Mathematics:"></h:outputText>
                   <h:selectOneMenu value="#{fifthSgpa.selectengmath}">
                     <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
                 </h:selectOneMenu>
-                  <h:outputText value="CSE[315]"></h:outputText>
+                  <h:outputText value="CSE[315]Sociology"></h:outputText>
                   <h:selectOneMenu value="#{fifthSgpa.selectsociology}">
                     <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
                 </h:selectOneMenu>
-                  <h:outputText value="CSE[316]"></h:outputText>
+                  <h:outputText value="CSE[316]Technical Writing and Communication"></h:outputText>
                   <h:selectOneMenu value="#{fifthSgpa.selecttechnical}">
                     <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
                 </h:selectOneMenu>
-                    <h:commandButton value="submit" actionListener="#{fifthSgpa.page(fifthSgpa.selectauto,fifthSgpa.selectmircro,fifthSgpa.selectmicroprac,fifthSgpa.selectengmath,fifthSgpa.selectsociology,fifthSgpa.selecttechnical)}"></h:commandButton>
-                    <h:outputLabel value="#{fifthSgpa.total}"></h:outputLabel>
+                  <h:commandButton value="submit" actionListener="#{fifthSgpa.page(fifthSgpa.selectauto,fifthSgpa.selectmircro,fifthSgpa.selectmicroprac,fifthSgpa.selectengmath,fifthSgpa.selectsociology,fifthSgpa.selecttechnical)}">
+                      <f:ajax execute="@form" render="sgpa"></f:ajax>
+                  </h:commandButton>
+                  <h:outputLabel value="#{fifthSgpa.total}" id="sgpa"></h:outputLabel>
             </h:panelGrid>
         </h:form>
-	
 	
   
   
