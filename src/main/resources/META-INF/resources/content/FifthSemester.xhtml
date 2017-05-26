@@ -47,8 +47,8 @@
                   <h:selectOneMenu value="#{fifthSgpa.selecttechnical}">
                     <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
                 </h:selectOneMenu>
-                  <h:commandLink value="submit" action="#{fifthSgpa.page(fifthSgpa.selectauto,fifthSgpa.selectmircro,fifthSgpa.selectmicroprac,fifthSgpa.selectengmath,fifthSgpa.selectsociology,fifthSgpa.selecttechnical)}"></h:commandLink>
-                  <h:outputLabel value="#{fifthSgpa.total}"></h:outputLabel>
+                    <h:commandButton value="submit" actionListener="#{fifthSgpa.page(fifthSgpa.selectauto,fifthSgpa.selectmircro,fifthSgpa.selectmicroprac,fifthSgpa.selectengmath,fifthSgpa.selectsociology,fifthSgpa.selecttechnical)}"></h:commandButton>
+                    <h:outputLabel value="#{fifthSgpa.total}"></h:outputLabel>
             </h:panelGrid>
         </h:form>
 	
