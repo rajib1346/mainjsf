@@ -20,7 +20,7 @@
                                
                                   
   <h:form>
-             <h2>Calculate Your 5th Semester GAP</h2>
+             <h2>Calculate Your 5th Semester GPA</h2>
             <h:panelGrid columns="2">
                 <h:outputText value="CSE[311]:Theory of Computation:"></h:outputText>
                 <h:selectOneMenu value="#{fifthSgpa.selectauto}">
@@ -46,7 +46,7 @@
                   <h:selectOneMenu value="#{fifthSgpa.selecttechnical}">
                     <f:selectItems value="#{fifthSgpa.allgrade}"></f:selectItems>
                 </h:selectOneMenu>
-                  <h:commandButton value="submit" actionListener="#{fifthSgpa.page(fifthSgpa.selectauto,fifthSgpa.selectmircro,fifthSgpa.selectmicroprac,fifthSgpa.selectengmath,fifthSgpa.selectsociology,fifthSgpa.selecttechnical)}">
+                  <h:commandButton value="Submit" actionListener="#{fifthSgpa.page(fifthSgpa.selectauto,fifthSgpa.selectmircro,fifthSgpa.selectmicroprac,fifthSgpa.selectengmath,fifthSgpa.selectsociology,fifthSgpa.selecttechnical)}">
                       <f:ajax execute="@form" render="sgpa"></f:ajax>
                   </h:commandButton>
                   <h:outputLabel value="#{fifthSgpa.total}" id="sgpa"></h:outputLabel>
