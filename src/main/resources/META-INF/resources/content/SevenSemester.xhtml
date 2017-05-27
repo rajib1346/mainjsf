@@ -20,46 +20,51 @@
                                
                                   
                                
-  <div class="contentsection template clear">
-      <div class="maincontaint clear">
-	      
-
-		  <div class="samepost clear">
-		   <h2>NU Book List</h2>
-		   <img src="images/java.jpg" alt="post image"></img>
-		     <p>
-             Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as
-		     few implementation dependencies as possible.The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary 
-		     licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under 
-		     the GNU General Public License.</p>
-		  
-	      
-		  
-		  </div>
-		  
-		  <div  class="samepost clear">
-		   <h2>Subject Wise Credit</h2>
-		   <img src="images/java.jpg" alt="post image"></img>
-		     <p>
-                     Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as
-		     few implementation dependencies as possible.The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary 
-		     licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under 
-		     the GNU General Public License.</p>
-		  
-	      
-		  
-		  </div>
-          
-            
-
-      </div>
-   </div>  
+     <h:form>
+            <h2>Calculate Your 7th Semester GPA</h2>
+            <h:panelGrid columns="2">
+               
+                <h:outputText value="CSE[411]:Computer Networking:"></h:outputText>
+                <h:selectOneMenu value="#{seventhSgpa.snet}">
+                    <f:selectItems value="#{seventhSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                 <h:outputText value="CSE[412]:Computer Networking Practical:"></h:outputText>
+                 <h:selectOneMenu value="#{seventhSgpa.snetp}">
+                    <f:selectItems value="#{seventhSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[413]:Artificial Intelligence and Neural Network:"></h:outputText>
+                  <h:selectOneMenu value="#{seventhSgpa.sai}">
+                    <f:selectItems value="#{seventhSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[414]:Prallel and Distibuted Processing:"></h:outputText>
+                  <h:selectOneMenu value="#{seventhSgpa.spdp}">
+                    <f:selectItems value="#{seventhSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[415]:Peripheral and Interfacing:"></h:outputText>
+                  <h:selectOneMenu value="#{seventhSgpa.spi}">
+                    <f:selectItems value="#{seventhSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[416]:Peripheral and Interfacing Practical:"></h:outputText>
+                  <h:selectOneMenu value="#{seventhSgpa.spip}">
+                    <f:selectItems value="#{seventhSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                <h:outputText value="CSE[417]:Digital Signal Processing:"></h:outputText>
+                <h:selectOneMenu value="#{seventhSgpa.sdsp}">
+                    <f:selectItems value="#{seventhSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu> 
+                 
+                <h:commandButton value="submit" actionListener="#{seventhSgpa.page(seventhSgpa.snet,seventhSgpa.snetp,seventhSgpa.sai,seventhSgpa.spdp,seventhSgpa.spi,seventhSgpa.spip,seventhSgpa.sdsp)}">
+                      <f:ajax execute="@form" render="sgpa"></f:ajax>
+                  </h:commandButton>
+                <h:outputLabel value="#{seventhSgpa.total}" id="sgpa"></h:outputLabel>
+            </h:panelGrid>
+        </h:form> 
   
   
 	<div class="footersection template clear">
 	
 	     
-	     <p>&copy;NU CSE Home</p>
+	     <p>&copy; NU CSE Home</p>
 	</div>  
         
   
