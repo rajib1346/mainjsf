@@ -10,15 +10,8 @@
     <h:body style="background: #3371FF">
           
                <h2>6th Semester Note</h2>
-                                   <p:menubar>	
-					 
-			         
-                                   
-                                    <p:menuitem value="Download NU Previous Year Question" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=6thQuestion')"
-                                                actionListener="#{contentMBean.setPage('6thQuestion')}" />
-                                   
-						
-                                   </p:menubar>	
+	    
+                                 
         <h:form>
                   
                   <h:dataTable value="#{sixSemesterNote.getLocation()}" var="u" border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
@@ -51,7 +44,7 @@
 	    <div class="footersection template clear">
 	
 	     
-	     <p>&copy;NU CSE Home</p>
+	     <p>&copy; NU CSE Home</p>
 	</div>  
 	    
     </h:body>
