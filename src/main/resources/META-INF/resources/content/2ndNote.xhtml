@@ -57,34 +57,7 @@
                
                 </h:form>  
              
-                <h:form>
-                    <h:panelGrid>
-                        <h:dataTable value="#{fastSemesterQuestion.getLocationQuestion()}" var="u" border="2" style=" margin-left: 30px ;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-  				
-               
-            
-            <h:column>
-               <f:facet name = "header">File Name</f:facet>
-               <h:outputLabel value = "#{u.qlocation}"
-                            
-                   />
-               
-            </h:column>
-            
-          
-                      
-                      <h:column>
-               <f:facet name = "header">Download</f:facet>
-               
-               <h:commandButton value="Download File" action="#{fastSemesterQuestion.downloadQuestion(u.qlocation)}" style="color: blue"/>     
-            </h:column>
-            
            
-            </h:dataTable>        
-                      
-                    </h:panelGrid>
-               
-                </h:form> 
                 
             </h:panelGrid>
          <div class="footersection template clear">
