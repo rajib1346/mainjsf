@@ -20,47 +20,44 @@
 						
                                
                                   
-                               
-  <div class="contentsection template clear">
-      <div class="maincontaint clear">
-	      
-
-		  <div class="samepost clear">
-		   <h2>NU Book List</h2>
-		   <img src="images/java.jpg" alt="post image"></img>
-		     <p>
-             Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as
-		     few implementation dependencies as possible.The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary 
-		     licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under 
-		     the GNU General Public License.</p>
-		  
-	      
-		  
-		  </div>
-		  
-		  <div  class="samepost clear">
-		   <h2>Subject Wise Credit</h2>
-		   <img src="images/java.jpg" alt="post image"></img>
-		     <p>
-                     Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as
-		     few implementation dependencies as possible.The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary 
-		     licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under 
-		     the GNU General Public License.</p>
-		  
-	      
-		  
-		  </div>
-          
-            
-
-      </div>
-   </div>  
+   <h:form>
+            <h2>Calculate Your 8th Semester GPA</h2>
+            <h:panelGrid columns="2">
+               
+                <h:outputText value="CSE[421]:Web Engineering:"></h:outputText>
+                <h:selectOneMenu value="#{eightSgpa.swe}">
+                    <f:selectItems value="#{eightSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                 <h:outputText value="CSE[422]:Web Engineering Practical:"></h:outputText>
+                 <h:selectOneMenu value="#{eightSgpa.swep}">
+                    <f:selectItems value="#{eightSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[423]:Computer and Network Security:"></h:outputText>
+                  <h:selectOneMenu value="#{eightSgpa.scms}">
+                    <f:selectItems value="#{eightSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[424|425|426|427]:Elective Course:"></h:outputText>
+                  <h:selectOneMenu value="#{eightSgpa.ses}">
+                    <f:selectItems value="#{eightSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[499]:Project:"></h:outputText>
+                  <h:selectOneMenu value="#{eightSgpa.sp}">
+                    <f:selectItems value="#{eightSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                 
+                 
+                  <h:commandButton value="submit" actionListener="#{eightSgpa.page(eightSgpa.swe,eightSgpa.swep,eightSgpa.scms,eightSgpa.ses,eightSgpa.sp)}">
+                      <f:ajax execute="@form" render="sgpa"></f:ajax>
+                  </h:commandButton>
+                  <h:outputLabel value="#{eightSgpa.total}" id="sgpa"></h:outputLabel>
+            </h:panelGrid>
+        </h:form>
   
   
 	<div class="footersection template clear">
 	
 	     
-	     <p>&copy;NU CSE Home</p>
+	     <p>&copy; NU CSE Home</p>
 	</div>  
         
   
