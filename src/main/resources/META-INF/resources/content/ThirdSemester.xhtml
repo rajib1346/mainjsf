@@ -19,48 +19,59 @@
 						
                                
                                   
-                               
-  <div class="contentsection template clear">
-      <div class="maincontaint clear">
-	      
-
-		  <div class="samepost clear">
-		   <h2>NU Book List</h2>
-		   <img src="images/java.jpg" alt="post image"></img>
-		     <p>
-             Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as
-		     few implementation dependencies as possible.The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary 
-		     licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under 
-		     the GNU General Public License.</p>
-		  
-	      
-		  
-		  </div>
-		  
-		  <div  class="samepost clear">
-		   <h2>Subject Wise Credit</h2>
-		   <img src="images/java.jpg" alt="post image"></img>
-		     <p>
-                     Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as
-		     few implementation dependencies as possible.The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary 
-		     licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under 
-		     the GNU General Public License.</p>
-		  
-	      
-		  
-		  </div>
-          
-            
-
-      </div>
-   </div>  
+  <h:form>
+            <h2>Calculate Your 3rd Semester GPA</h2>
+            <h:panelGrid columns="2">
+               
+                <h:outputText value="CSE[211]:Object Oriented Programming:"></h:outputText>
+                <h:selectOneMenu value="#{thirdSgpa.scplus}">
+                    <f:selectItems value="#{thirdSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                 <h:outputText value="CSE[212]:OO Programming Language Practical:"></h:outputText>
+                 <h:selectOneMenu value="#{thirdSgpa.scplusprac}">
+                    <f:selectItems value="#{thirdSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[213]:Operating System:"></h:outputText>
+                  <h:selectOneMenu value="#{thirdSgpa.sos}">
+                    <f:selectItems value="#{thirdSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[214]:Digitl Logic Design:"></h:outputText>
+                  <h:selectOneMenu value="#{thirdSgpa.sdld}">
+                    <f:selectItems value="#{thirdSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[215]:Digital Logic Design Practical:"></h:outputText>
+                  <h:selectOneMenu value="#{thirdSgpa.sdldprac}">
+                    <f:selectItems value="#{thirdSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[216]:Mathematics for CSE:"></h:outputText>
+                  <h:selectOneMenu value="#{thirdSgpa.smath}">
+                    <f:selectItems value="#{thirdSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                <h:outputText value="CSE[217]:Electronic Devices and Circuits:"></h:outputText>
+                <h:selectOneMenu value="#{thirdSgpa.sedc}">
+                    <f:selectItems value="#{thirdSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu> 
+                 <h:outputText value="CSE[218]:Electronic Devices and Circuits Practical:"></h:outputText>
+                 <h:selectOneMenu value="#{thirdSgpa.sedcprac}">
+                    <f:selectItems value="#{thirdSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu> 
+                  <h:outputText value="CSE[217]:Basic Acounting:"></h:outputText>
+                  <h:selectOneMenu value="#{thirdSgpa.sacc}">
+                    <f:selectItems value="#{thirdSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu> 
+                  <h:commandButton value="submit" actionListener="#{thirdSgpa.page(thirdSgpa.scplus,thirdSgpa.scplusprac,thirdSgpa.sos,thirdSgpa.sdld,thirdSgpa.sdldprac,thirdSgpa.smath,thirdSgpa.sedc,thirdSgpa.sedcprac,thirdSgpa.sacc)}">
+                      <f:ajax execute="@form" render="sgpa"></f:ajax>
+                  </h:commandButton>
+                  <h:outputLabel value="#{thirdSgpa.total}" id="sgpa"></h:outputLabel>
+            </h:panelGrid>
+        </h:form>
   
   
 	
         <div class="footersection template clear">
 	
 	     
-	     <p>&copy;NU CSE Home</p>
+	     <p>&copy; NU CSE Home</p>
 	</div>  
   
 </ui:composition>
